@@ -1,0 +1,180 @@
+.request {
+    display: grid;
+    grid-template-columns: 1fr 678px;
+    label {
+        display: block;
+
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 444px;
+        margin-right: 141px;
+    }
+    &__top-title {
+        order: -1;
+        margin-bottom: 53px;
+        padding-top: 95px;
+
+        color: #06A9B3;
+    }
+    &__title {
+        margin-bottom: 24px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 48px;
+    }
+    .form__mail-input {
+        padding-top: 13px;
+        padding-bottom: 11px;
+    }
+}
+
+.request-form {
+    padding-left: 117px;
+}
+
+.form {
+    display: grid;
+    grid-template-rows: repeat(8, auto);
+    grid-template-columns: repeat(3, 132px);
+    grid-column-gap: 24px;
+    input, select {
+        padding: 13px 15px 10px;
+        border: 1px solid #CFDCE3;
+    }
+    input:focus::placeholder {
+        text-indent: 508px; transition: text-indent 0.6s ease;
+    }
+    input::placeholder, select::placeholder, select {
+        color: rgba(51, 51, 51, 0.3);
+    }
+    input:active, select:active,input:focus,select:focus {
+        outline: none;
+    }
+    &__select-label {
+        grid-column: 1/2;
+        grid-row: 1/2;
+
+        padding-bottom: 4px;
+    }
+    &__select-input {
+        grid-column: 1/2;
+        grid-row: 2/3;
+
+        background-image: url(../img/arrow.svg);
+        background-repeat: no-repeat;
+        background-position: 96% 52%;
+        appearance: none;
+        &:active,&:focus {
+            opacity: 0.7;
+        }
+    }
+    &__name-label {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    &__name-input {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    &__surname-label {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    &__surname-input {
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+    &__mail-label {
+        grid-column: 1/-1;
+        grid-row: 3/4;
+
+        margin-top: 20px;
+        padding-bottom: 4px;
+    }
+    &__mail-input {
+        grid-column: 1/-1;
+        grid-row: 4/5;
+
+        margin-bottom: 20px;
+    }
+    &__tel-label {
+        grid-column: 1/-1;
+        grid-row: 5/6;
+
+        padding-bottom: 4px;
+    }
+    &__tel-input {
+        grid-column: 1/-1;
+        grid-row: 6/7;
+
+        margin-bottom: 30px;
+    }
+    &__checkboxs {
+        grid-column: 1/-1;
+        grid-row: 7/8;
+    }
+    &__button {
+        width: 155px;
+        margin-bottom: 100px;
+        padding-top: 14px;
+        padding-bottom: 12px;
+
+        color: #FFFFFF;
+        background-color: #06A9B3;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.checkboxs {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 37px;
+    input {
+        display: none;
+    }
+    &__agreement-label, &__mailing-label { 
+        position: relative;
+        justify-self: center;
+
+        line-height: 16px;
+        &::before {
+            position: absolute;
+            content: "";
+            left: -33px;
+            width: 16px;
+            height: 16px;
+
+            border: 1px solid #CFDCE3;
+        }
+    }
+    &__agreement-label {
+        width: 155px;
+    }
+    &__agreement-input:checked+label::after {
+        position: absolute;
+        content: "";
+        top: 3px;
+        left: -30px;
+        width: 12px;
+        height: 12px;
+
+        background-color: #06A9B3;
+    }
+    &__mailing-input:checked+label::after {
+        position: absolute;
+        content: "";
+        top: 3px;
+        left: -30px;
+        width: 12px;
+        height: 12px;
+        
+        background-color: #06A9B3;
+    }
+}
